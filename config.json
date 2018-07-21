@@ -1,0 +1,17 @@
+{
+	"series": {
+		"move_to": "<target folder>",
+		"clean_up": true,
+		"keep_directory_structure": true
+	},
+	"anime": {
+		"move_to": "<target folder>",
+		"clean_up": true,
+		"keep_directory_structure": false
+	},
+	"DEFAULT": {
+		"move_to": "<target folder>",
+		"clean_up": false,
+		"keep_directory_structure": true
+	}
+}

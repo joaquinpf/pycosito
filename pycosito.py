@@ -108,7 +108,7 @@ def main():
     for torrent_file in torrent_files:
         name = torrent_file.name
 
-        source_path = torrent_info.base_folder + '\\' + name
+        source_path = torrent_info.base_folder + os.sep + name
         if not os.path.exists(source_path):
             logger.info("Filtering file '%s' since it wasn't downloaded" % source_path)
             continue
@@ -129,7 +129,7 @@ def main():
         shutil.move(source_path, target_path)
 
     if args.tor_api_remove_torrent:
-        logger.info("Deleting torrent info and source base folder '%s'" % torrent_info.base_folder)
+        logger.info("Deleting torrent data")
         api_client.remove_torrent(torrent_hash)
 
 
